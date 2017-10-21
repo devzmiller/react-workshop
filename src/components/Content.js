@@ -1,9 +1,15 @@
 import React, {Component} from 'react'
+import Stats from './Stats'
+import Blurb from './Blurb'
 
 class Content extends Component {
   render(){
     return(<div>
-      and I'm your main content
+      <h2>Home</h2>
+      <p>Welcome to this practice website.</p>
+
+      <Stats location='Seattle, WA' catName='Oolong Kittea' yogurt='lemon pear' />
+      <Blurb />
       </div>)
   }
 }
