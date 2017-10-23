@@ -1,17 +1,18 @@
 import React, {Component} from 'react'
-import Stats from './Stats'
-import Blurb from './Blurb'
+import Home from './Home'
+import About from './About'
+import Contact from './Contact'
 
 class Content extends Component {
-  render(){
-    return(<div>
-      <h2>Home</h2>
-      <p>Welcome to this practice website.</p>
-
-      <Stats location='Seattle, WA' catName='Oolong Kittea' yogurt='lemon pear' />
-      <Blurb />
-      </div>)
+  render () {
+    if (this.props.content === 'home') {
+      return (<Home />)
+    } else if (this.props.content === 'contact') {
+      return (<Contact />)
+    } else {
+      return (<About />)
+    }
   }
 }
 
-export default Content;
+export default Content
